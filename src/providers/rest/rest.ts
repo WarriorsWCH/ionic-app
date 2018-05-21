@@ -75,4 +75,10 @@ export class RestProvider {
   login(mobile, password): Observable<string[]>{
     return this.getUrlReturn(`${this.apiUrlLogin}?mobile=${mobile}&password=${password}`);
   }
+  register(mobile, nickname, password): Observable<string[]> {
+    return this.getUrlReturn(`${this.apiUrlRegister}?mobile=${mobile}&nickname=${nickname}&password=${password}`)
+  }
+  getUserInfo(userId): Observable<string[]> {
+    return this.getUrlReturn(`${this.apiUrlUserInfo}?userid=${userId}`);
+  }
 }

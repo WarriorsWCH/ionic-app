@@ -1,3 +1,4 @@
+import { UserPage } from './../pages/user/user';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -17,6 +18,7 @@ import { RestProvider } from '../providers/rest/rest';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { RegisterPage } from '../pages/register/register';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,17 @@ import { IonicStorageModule } from '@ionic/storage';
     MorePage,
     HomePage,
     LoginPage,
+    RegisterPage,
+    UserPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      backButtonText: '返回'
+    }),
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -45,6 +51,8 @@ import { IonicStorageModule } from '@ionic/storage';
     MorePage,
     HomePage,
     LoginPage,
+    RegisterPage,
+    UserPage,
     TabsPage
   ],
   providers: [

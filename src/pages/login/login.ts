@@ -3,6 +3,7 @@ import { NavController, NavParams, ViewController, LoadingController, ToastContr
 import { BaseUI } from '../../common/baseui';
 import { RestProvider } from '../../providers/rest/rest';
 import { Storage } from '@ionic/storage';
+import { RegisterPage } from '../register/register';
 
 /**
  * Generated class for the LoginPage page.
@@ -43,6 +44,7 @@ export class LoginPage extends BaseUI{
         if(f['Status'] == 'OK'){
           this.storage.set('userid',f['UserId']);
           loading.dismiss();
+          this.dismiss();
         } else {
           loading.dismiss();
           super.showToast(this.toastCtrl, f['StatusContent']);
@@ -50,7 +52,9 @@ export class LoginPage extends BaseUI{
       },
       error=>this.errorMessage = <any>error); 
   }
-
+  pushRegister() {
+    this.navCtrl.push(RegisterPage);
+  }
   dismiss() {
     this.viewCtrl.dismiss();
   }
