@@ -1,3 +1,4 @@
+import { HeadfacePage } from './../headface/headface';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController, LoadingController, ViewController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
@@ -50,7 +51,7 @@ export class UserPage extends BaseUI{
     })
   }
   gotoHeadface() {
-
+    this.navCtrl.push(HeadfacePage);
   }
   updateNickName() {
     this.storage.get('userid').then((val)=>{

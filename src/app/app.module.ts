@@ -1,3 +1,4 @@
+import { HeadfacePage } from './../pages/headface/headface';
 import { UserPage } from './../pages/user/user';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -31,6 +32,7 @@ import { RegisterPage } from '../pages/register/register';
     LoginPage,
     RegisterPage,
     UserPage,
+    HeadfacePage,
     TabsPage
   ],
   imports: [
@@ -53,6 +55,7 @@ import { RegisterPage } from '../pages/register/register';
     LoginPage,
     RegisterPage,
     UserPage,
+    HeadfacePage,
     TabsPage
   ],
   providers: [
