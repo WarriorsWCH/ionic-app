@@ -144,7 +144,7 @@ export class HeadfacePage extends BaseUI {
       fileName: filename,
       chunkedMode: false,
       mimeType: "multipart/form-data",
-      params: { 'fileName': filename, 'userid': this.userId }
+      params: { 'fileName': filename, 'UserId': this.userId }
     };
 
     const fileTransfer: FileTransferObject = this.transfer.create();

@@ -40,7 +40,7 @@ export class RegisterPage extends BaseUI {
         f=>{
           console.log(f);
           if(f['Status'] == 'OK'){
-            // this.storage.set('userid',f['UserId']);
+            // this.storage.set('UserId',f['UserId']);
             super.showToast(this.toastCtrl, '注册成功');
             loading.dismiss();
             this.dismiss();

@@ -42,7 +42,7 @@ export class LoginPage extends BaseUI{
       f=>{
         console.log(f);
         if(f['Status'] == 'OK'){
-          this.storage.set('userid',f['UserId']);
+          this.storage.set('UserId',f['UserId']);
           loading.dismiss();
           this.dismiss();
         } else {

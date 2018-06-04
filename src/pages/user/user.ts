@@ -38,7 +38,7 @@ export class UserPage extends BaseUI{
     this.loadUserPage();
   }
   loadUserPage() {
-    this.storage.get('userid').then((val)=>{
+    this.storage.get('UserId').then((val)=>{
       if(val != null){
         const loading = super.showLoading(this.loadCtrl, '加载中...');
         this.rest.getUserInfo(val).subscribe(userinfo => {
@@ -54,7 +54,7 @@ export class UserPage extends BaseUI{
     this.navCtrl.push(HeadfacePage);
   }
   updateNickName() {
-    this.storage.get('userid').then((val)=>{
+    this.storage.get('UserId').then((val)=>{
       if(val != null){
         const loading = super.showLoading(this.loadCtrl, '修改中...');
         this.rest.updateNickName(val, this.nickName).subscribe(f => {
@@ -70,7 +70,7 @@ export class UserPage extends BaseUI{
     })
   }
   logout() {
-    this.storage.remove('userid');
+    this.storage.remove('UserId');
     // this.viewCtrl.dismiss();
     this.navCtrl.pop();
   }
