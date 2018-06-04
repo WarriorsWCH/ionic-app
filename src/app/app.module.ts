@@ -20,6 +20,10 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { RegisterPage } from '../pages/register/register';
+import { File } from '@ionic-native/file';
+import { Camera } from '@ionic-native/camera';
+import { FilePath } from '@ionic-native/file-path';
+import { FileTransfer} from '@ionic-native/file-transfer';
 
 @NgModule({
   declarations: [
@@ -62,7 +66,11 @@ import { RegisterPage } from '../pages/register/register';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
+    RestProvider,
+    File,
+    FileTransfer,
+    FilePath,
+    Camera,
   ]
 })
 export class AppModule {}
