@@ -26,6 +26,7 @@ import { FilePath } from '@ionic-native/file-path';
 import { FileTransfer} from '@ionic-native/file-transfer';
 import { DetailsPage } from '../pages/details/details';
 import { QuestionPage } from '../pages/question/question';
+import { AnswerPage } from '../pages/answer/answer';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { QuestionPage } from '../pages/question/question';
     HeadfacePage,
     TabsPage,
     DetailsPage,
-    QuestionPage
+    QuestionPage,
+    AnswerPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ import { QuestionPage } from '../pages/question/question';
     HeadfacePage,
     TabsPage,
     DetailsPage,
-    QuestionPage
+    QuestionPage,
+    AnswerPage
   ],
   providers: [
     StatusBar,
