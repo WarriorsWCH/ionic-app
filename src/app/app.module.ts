@@ -27,6 +27,11 @@ import { FileTransfer} from '@ionic-native/file-transfer';
 import { DetailsPage } from '../pages/details/details';
 import { QuestionPage } from '../pages/question/question';
 import { AnswerPage } from '../pages/answer/answer';
+import { ChatdetailsPage } from '../pages/chatdetails/chatdetails';
+import { EmojiProvider } from '../providers/emoji/emoji';
+import { ComponentsModule } from '../components/components.module';
+import { RelativetimePipe } from '../pipes/relativetime/relativetime';
+import { ChatserviceProvider } from '../providers/chatservice/chatservice';
 
 @NgModule({
   declarations: [
@@ -43,7 +48,9 @@ import { AnswerPage } from '../pages/answer/answer';
     TabsPage,
     DetailsPage,
     QuestionPage,
-    AnswerPage
+    AnswerPage,
+    ChatdetailsPage,
+    RelativetimePipe
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,8 @@ import { AnswerPage } from '../pages/answer/answer';
     IonicModule.forRoot(MyApp, {
       backButtonText: '返回'
     }),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -69,7 +77,8 @@ import { AnswerPage } from '../pages/answer/answer';
     TabsPage,
     DetailsPage,
     QuestionPage,
-    AnswerPage
+    AnswerPage,
+    ChatdetailsPage
   ],
   providers: [
     StatusBar,
@@ -80,6 +89,8 @@ import { AnswerPage } from '../pages/answer/answer';
     FileTransfer,
     FilePath,
     Camera,
+    EmojiProvider,
+    ChatserviceProvider
   ]
 })
 export class AppModule {}
