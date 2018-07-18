@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController, ToastController, LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { BaseUI } from '../../common/baseui';
+import { UserdatalistPage } from '../userdatalist/userdatalist';
 
 /**
  * Generated class for the MorePage page.
@@ -71,5 +72,8 @@ export class MorePage extends BaseUI{
 
   goToUserPage() {
     this.navCtrl.push(UserPage);
+  }
+  gotoDataList(type) {
+    this.navCtrl.push(UserdatalistPage, { "dataType": type })
   }
 }

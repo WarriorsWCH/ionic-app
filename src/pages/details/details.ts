@@ -46,7 +46,7 @@ export class DetailsPage extends BaseUI {
     this.storage.get('UserId').then((val) => {
       if (val !== null) {
         this.userId = val;
-        var loading = super.showLoading(this.loadingCtrl, "加载中...");
+        super.showLoading(this.loadingCtrl, "加载中...");
         this.rest.getQuestionWithUser(id, val)
           .subscribe(
           q => {
@@ -54,7 +54,7 @@ export class DetailsPage extends BaseUI {
             this.answers = q["Answers"];
             this.isFavourite = q["IsFavourite"];
             this.isMyQuestion = (q["OwnUserId"] == val);
-            loading.dismissAll();
+            // loading.dismissAll();
           },
           error => this.errorMessage = <any>error);
       }
