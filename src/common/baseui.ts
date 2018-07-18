@@ -1,5 +1,4 @@
 import {Loading, LoadingController, ToastController, Toast} from 'ionic-angular';
-import { mergeAnalyzedFiles } from '@angular/compiler';
 
 export abstract class BaseUI {
     constructor(){}

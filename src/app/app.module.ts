@@ -33,6 +33,7 @@ import { ComponentsModule } from '../components/components.module';
 import { RelativetimePipe } from '../pipes/relativetime/relativetime';
 import { ChatserviceProvider } from '../providers/chatservice/chatservice';
 import { UserdatalistPage } from '../pages/userdatalist/userdatalist';
+import { SettingsProvider } from '../providers/settings/settings';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { UserdatalistPage } from '../pages/userdatalist/userdatalist';
     FilePath,
     Camera,
     EmojiProvider,
-    ChatserviceProvider
+    ChatserviceProvider,
+    SettingsProvider
   ]
 })
 export class AppModule {}
