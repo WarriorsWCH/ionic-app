@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/storage';
 import { BaseUI } from '../../common/baseui';
@@ -7,6 +7,7 @@ import { RestProvider } from '../../providers/rest/rest';
 import { UserPage } from '../user/user';
 import { UserdatalistPage } from "../userdatalist/userdatalist";
 import { SettingsProvider } from '../../providers/settings/settings';
+import { ScanPage } from '../scan/scan';
 
 
 @Component({
@@ -75,7 +76,17 @@ export class MorePage extends BaseUI {
   gotoUserPage() {
     this.navCtrl.push(UserPage);
   }
-
+ /**
+   * 跳转到扫描二维码的页面，加上 animate = false 的参数是为了
+   * 相机能够在整个屏幕中显示，如果不加，相机就出不来。
+   * animate 的参数默认值为 true
+   * 
+   * @memberof MorePage
+   */
+  gotoScanQRCode() {
+    this.navCtrl.push(ScanPage, null, { "animate": false });
+  }
+  
   toggleChangeTheme() {
     
     if (this.selectedTheme === 'dark-theme') {
