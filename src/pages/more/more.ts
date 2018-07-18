@@ -8,6 +8,7 @@ import { UserPage } from '../user/user';
 import { UserdatalistPage } from "../userdatalist/userdatalist";
 import { SettingsProvider } from '../../providers/settings/settings';
 import { ScanPage } from '../scan/scan';
+import { VersionsPage } from '../versions/versions';
 
 
 @Component({
@@ -96,5 +97,8 @@ export class MorePage extends BaseUI {
       
       this.settings.setActiveTheme('dark-theme');
     }
+  }
+  gotoVersions() {
+    this.navCtrl.push(VersionsPage);
   }
 }

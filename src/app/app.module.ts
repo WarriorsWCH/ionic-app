@@ -36,6 +36,8 @@ import { UserdatalistPage } from '../pages/userdatalist/userdatalist';
 import { SettingsProvider } from '../providers/settings/settings';
 import { ScanPage } from '../pages/scan/scan';
 import { QRScanner } from '@ionic-native/qr-scanner';
+import { VersionsPage } from '../pages/versions/versions';
+import { AppVersion } from '@ionic-native/app-version';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { QRScanner } from '@ionic-native/qr-scanner';
     ChatdetailsPage,
     RelativetimePipe,
     UserdatalistPage,
-    ScanPage
+    ScanPage,
+    VersionsPage
   ],
   imports: [
     BrowserModule,
@@ -86,7 +89,8 @@ import { QRScanner } from '@ionic-native/qr-scanner';
     AnswerPage,
     ChatdetailsPage,
     UserdatalistPage,
-    ScanPage
+    ScanPage,
+    VersionsPage
   ],
   providers: [
     StatusBar,
@@ -100,7 +104,8 @@ import { QRScanner } from '@ionic-native/qr-scanner';
     EmojiProvider,
     ChatserviceProvider,
     SettingsProvider,
-    QRScanner
+    QRScanner,
+    AppVersion
   ]
 })
 export class AppModule {}
